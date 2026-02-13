@@ -341,7 +341,7 @@
             <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#prediction">目標達成予測</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#nutrition">食事分析</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#records">トレーニング記録</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#activityData">📱 基礎活動データ</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#activityData">[=] 基礎活動データ</a></li>
         </ul>
 
         <!-- タブコンテンツ -->
@@ -480,7 +480,7 @@
                                 </div>
                             </div>
                             <div id="muscleMapModeDescription" class="alert alert-info py-2 mb-3" style="font-size: 12px;">
-                                <strong>🔵 トレーニング頻度モード:</strong> 各部位のトレーニング回数を相対比較（青→緑→橙→赤）
+                                <strong>トレーニング頻度モード:</strong> 各部位のトレーニング回数を相対比較（青→緑→橙→赤）
                             </div>
                             <div class="row">
                                 <!-- リアルな筋肉図を外部SVGから読み込み -->
@@ -841,9 +841,9 @@
                                 <small class="text-muted" id="photoLoadingText">読み込み中...</small>
                             </div>
                             <div class="d-flex justify-content-between align-items-center mb-2">
-                                <button class="btn btn-sm btn-link p-0" onclick="changeMealCalendarMonth(-1)">◀</button>
+                                <button class="btn btn-sm btn-link p-0" onclick="changeMealCalendarMonth(-1)"><</button>
                                 <span class="small fw-bold" id="mealCalendarTitle">2026年2月</span>
-                                <button class="btn btn-sm btn-link p-0" onclick="changeMealCalendarMonth(1)">▶</button>
+                                <button class="btn btn-sm btn-link p-0" onclick="changeMealCalendarMonth(1)">></button>
                             </div>
                             <table class="table table-sm table-bordered text-center mb-2" style="font-size: 11px;">
                                 <thead><tr class="table-light">
@@ -1156,8 +1156,8 @@
             <!-- 基礎活動データタブ -->
             <div class="tab-pane fade" id="activityData">
                 <div class="alert alert-info mb-4">
-                    <strong>📱 ウェアラブルデバイス連携</strong> — Apple Watch / Garmin / Fitbit / Google Fit などから自動取得されるデータを表示します。
-                    <button class="btn btn-sm btn-outline-primary ms-2" onclick="syncWearableData()">🔄 同期</button>
+                    <strong>[=] ウェアラブルデバイス連携</strong> — Apple Watch / Garmin / Fitbit / Google Fit などから自動取得されるデータを表示します。
+                    <button class="btn btn-sm btn-outline-primary ms-2" onclick="syncWearableData()">同期</button>
                     <span class="text-muted ms-2 small" id="lastSyncTime">最終同期: --</span>
                 </div>
 
@@ -1165,7 +1165,7 @@
                 <div class="row g-3 mb-4">
                     <div class="col-md-3">
                         <div class="card p-3 text-center" id="deviceCard">
-                            <div style="font-size:2rem;">⌚</div>
+                            <div style="font-size:2rem;">[w]</div>
                             <div class="fw-bold" id="connectedDevice">未接続</div>
                             <small class="text-muted" id="deviceBattery">--</small>
                             <button class="btn btn-sm btn-outline-secondary mt-2" onclick="showDeviceSetup()">デバイス設定</button>
@@ -1200,7 +1200,7 @@
                 <!-- コンディションアドバイス -->
                 <div class="card p-3 mb-4" id="activityAdviceCard" style="border-left:3px solid var(--pip-green);">
                     <div class="d-flex align-items-center gap-2">
-                        <span style="font-size:1.2rem;">💡</span>
+                        <span style="font-size:1.2rem;">[?]</span>
                         <span id="activityAdviceText" style="font-size:13px;">データを読み込み中...</span>
                     </div>
                 </div>
@@ -1210,7 +1210,7 @@
                     <div class="col-12">
                         <div class="card p-4">
                             <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-                                <h5 class="mb-0">📝 主観的コンディション</h5>
+                                <h5 class="mb-0">[>] 主観的コンディション</h5>
                                 <span class="text-muted small" id="lastSubjectiveEntry">最終入力: --</span>
                             </div>
                             <div class="row g-4">
@@ -1220,8 +1220,8 @@
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h6 class="mb-0" style="font-size:13px;">入力</h6>
                                             <select class="form-select form-select-sm" id="subjTiming" style="max-width:130px;font-size:11px;">
-                                                <option value="morning">☀️ 朝（起床時）</option>
-                                                <option value="post">🏋️ トレーニング後</option>
+                                                <option value="morning">朝（起床時）</option>
+                                                <option value="post">[#] トレーニング後</option>
                                             </select>
                                         </div>
                                         <div class="mb-2">
@@ -1302,7 +1302,7 @@
                     <!-- 睡眠データ -->
                     <div class="col-lg-6">
                         <div class="card p-4">
-                            <h5 class="mb-3">😴 睡眠</h5>
+                            <h5 class="mb-3">[z] 睡眠</h5>
                             <div class="row g-3 mb-3">
                                 <div class="col-4 text-center">
                                     <div class="text-muted small">睡眠時間</div>
@@ -1342,7 +1342,7 @@
                     <!-- 心肺機能 -->
                     <div class="col-lg-6">
                         <div class="card p-4">
-                            <h5 class="mb-3">❤️ 心肺機能</h5>
+                            <h5 class="mb-3">[+] 心肺機能</h5>
                             <div class="row g-3 mb-3">
                                 <div class="col-4 text-center">
                                     <div class="text-muted small">VO2max</div>
@@ -1381,7 +1381,7 @@
                     <!-- 活動量 -->
                     <div class="col-lg-6">
                         <div class="card p-4">
-                            <h5 class="mb-3">🏃 活動量</h5>
+                            <h5 class="mb-3">[>] 活動量</h5>
                             <div class="row g-3 mb-3">
                                 <div class="col-3 text-center">
                                     <div class="text-muted small">歩数</div>
@@ -1411,7 +1411,7 @@
                     <!-- 回復・ストレス -->
                     <div class="col-lg-6">
                         <div class="card p-4">
-                            <h5 class="mb-3">🧘 回復・ストレス</h5>
+                            <h5 class="mb-3">[~] 回復・ストレス</h5>
                             <div class="row g-3 mb-3">
                                 <div class="col-4 text-center">
                                     <div class="text-muted small">回復スコア</div>
@@ -1448,7 +1448,7 @@
                     <!-- 体組成トレンド -->
                     <div class="col-lg-6">
                         <div class="card p-4">
-                            <h5 class="mb-3">⚖️ 体組成トレンド</h5>
+                            <h5 class="mb-3">[=] 体組成トレンド</h5>
                             <div class="row g-3 mb-3">
                                 <div class="col-3 text-center">
                                     <div class="text-muted small">体重</div>
@@ -1478,7 +1478,7 @@
                     <!-- SpO2・体温 -->
                     <div class="col-lg-6">
                         <div class="card p-4">
-                            <h5 class="mb-3">🌡️ バイタルサイン</h5>
+                            <h5 class="mb-3">[!] バイタルサイン</h5>
                             <div class="row g-3 mb-3">
                                 <div class="col-4 text-center">
                                     <div class="text-muted small">SpO2</div>
@@ -1534,7 +1534,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header py-2">
-                    <h5 class="modal-title" id="alertDetailTitle">⚠ アラート詳細</h5>
+                    <h5 class="modal-title" id="alertDetailTitle">[!] アラート詳細</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body" id="alertDetailBody" style="max-height:70vh;overflow-y:auto;">
@@ -1551,7 +1551,7 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title">📊 体型分析結果 & 向いているスポーツ</h5>
+                    <h5 class="modal-title">[*] 体型分析結果 & 向いているスポーツ</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
@@ -1560,7 +1560,7 @@
                         <div class="col-lg-6">
                             <div class="card h-100">
                                 <div class="card-header bg-light">
-                                    <h6 class="mb-0">🏋️ 体型分析結果</h6>
+                                    <h6 class="mb-0">[#] 体型分析結果</h6>
                                 </div>
                                 <div class="card-body">
                                     <div id="bodyTypeResultModal">
@@ -1582,7 +1582,7 @@
                         <div class="col-lg-6">
                             <div class="card h-100">
                                 <div class="card-header bg-light">
-                                    <h6 class="mb-0">🏆 向いているスポーツ TOP5</h6>
+                                    <h6 class="mb-0">[*] 向いているスポーツ TOP5</h6>
                                 </div>
                                 <div class="card-body">
                                     <div id="suitableSportsListModal">
@@ -5497,10 +5497,10 @@
             const descEl = document.getElementById('muscleMapModeDescription');
             
             if (mode === 'training') {
-                descEl.innerHTML = '<strong>🔵 トレーニング頻度モード:</strong> 各部位のトレーニング回数を相対比較（青→緑→橙→赤）';
+                descEl.innerHTML = '<strong>トレーニング頻度モード:</strong> 各部位のトレーニング回数を相対比較（青→緑→橙→赤）';
                 updateMuscleMap();
             } else {
-                descEl.innerHTML = '<strong>🟣 統合スコアモード:</strong> 推定1RMから算出した偏差値で筋力レベルを表示（紫系グラデーション）';
+                descEl.innerHTML = '<strong>統合スコアモード:</strong> 推定1RMから算出した偏差値で筋力レベルを表示（紫系グラデーション）';
                 updateIntegratedMuscleMap();
             }
         }
@@ -6120,7 +6120,7 @@
             const sports = [
                 {
                     name: 'ウェイトリフティング',
-                    icon: '🏋️',
+                    icon: '[#]',
                     calc: () => {
                         let score = 0;
                         score += legScore * 0.35; // 脚力重要
@@ -6132,7 +6132,7 @@
                 },
                 {
                     name: 'パワーリフティング',
-                    icon: '💪',
+                    icon: '[+]',
                     calc: () => {
                         let score = 0;
                         score += legScore * 0.3;
@@ -6144,7 +6144,7 @@
                 },
                 {
                     name: 'ボディビル・フィジーク',
-                    icon: '🎖️',
+                    icon: '[M]',
                     calc: () => {
                         let score = 0;
                         const balance = 100 - Math.abs(chestScore - backScore) - Math.abs(legScore - armScore);
@@ -6157,7 +6157,7 @@
                 },
                 {
                     name: '水泳',
-                    icon: '🏊',
+                    icon: '[S]',
                     calc: () => {
                         let score = 0;
                         score += backScore * 0.35; // 広背筋重要
@@ -6169,7 +6169,7 @@
                 },
                 {
                     name: 'ラグビー・アメフト',
-                    icon: '🏈',
+                    icon: '[F]',
                     calc: () => {
                         let score = 0;
                         score += legScore * 0.3;
@@ -6182,7 +6182,7 @@
                 },
                 {
                     name: 'サッカー',
-                    icon: '⚽',
+                    icon: '[S]',
                     calc: () => {
                         let score = 0;
                         score += legScore * 0.45; // 脚力最重要
@@ -6193,7 +6193,7 @@
                 },
                 {
                     name: 'バスケットボール',
-                    icon: '🏀',
+                    icon: '[B]',
                     calc: () => {
                         let score = 0;
                         score += legScore * 0.35;
@@ -6205,7 +6205,7 @@
                 },
                 {
                     name: 'ボクシング・格闘技',
-                    icon: '🥊',
+                    icon: '[X]',
                     calc: () => {
                         let score = 0;
                         score += shoulderScore * 0.25;
@@ -6218,7 +6218,7 @@
                 },
                 {
                     name: 'ロードサイクリング',
-                    icon: '🚴',
+                    icon: '[C]',
                     calc: () => {
                         let score = 0;
                         score += legScore * 0.5; // 脚力最重要
@@ -6229,7 +6229,7 @@
                 },
                 {
                     name: 'ゴルフ',
-                    icon: '⛳',
+                    icon: '[G]',
                     calc: () => {
                         let score = 0;
                         score += backScore * 0.3; // 回旋力
@@ -6241,7 +6241,7 @@
                 },
                 {
                     name: 'テニス',
-                    icon: '🎾',
+                    icon: '[T]',
                     calc: () => {
                         let score = 0;
                         score += shoulderScore * 0.3;
@@ -6253,7 +6253,7 @@
                 },
                 {
                     name: 'クライミング',
-                    icon: '🧗',
+                    icon: '[R]',
                     calc: () => {
                         let score = 0;
                         score += backScore * 0.35; // 懸垂力
@@ -6419,15 +6419,15 @@
             var latestWeight = weightsWithData.length > 0 ? parseBodyWeight(weightsWithData[weightsWithData.length - 1].bodyWeight) : 75;
             
             var exercises = [
-                { key: 'bench', name: 'ベンチプレス', icon: '🏋️', custom: false, filter: function(d) { return d.exercise.includes('ベンチプレス') && !d.exercise.includes('インクライン') && d.weight > 0; } },
-                { key: 'squat', name: 'スクワット', icon: '🦿', custom: false, filter: function(d) { return (d.exercise.includes('スクワット') || d.exercise.includes('SQ')) && !d.exercise.includes('ブルガリアン') && !d.exercise.includes('シッシー') && d.weight > 0; } },
-                { key: 'latpull', name: 'ラットプル', icon: '💪', custom: false, filter: function(d) { return d.exercise.includes('ラットプル') && d.weight > 0; } }
+                { key: 'bench', name: 'ベンチプレス', icon: '[#]', custom: false, filter: function(d) { return d.exercise.includes('ベンチプレス') && !d.exercise.includes('インクライン') && d.weight > 0; } },
+                { key: 'squat', name: 'スクワット', icon: '[L]', custom: false, filter: function(d) { return (d.exercise.includes('スクワット') || d.exercise.includes('SQ')) && !d.exercise.includes('ブルガリアン') && !d.exercise.includes('シッシー') && d.weight > 0; } },
+                { key: 'latpull', name: 'ラットプル', icon: '[+]', custom: false, filter: function(d) { return d.exercise.includes('ラットプル') && d.weight > 0; } }
             ];
             customBenchmarkExercises.forEach(function(exName) {
                 exercises.push({
                     key: 'custom_' + exName,
                     name: exName,
-                    icon: '🔥',
+                    icon: '[!]',
                     custom: true,
                     filter: function(d) { return d.exercise.includes(exName) && d.weight > 0; }
                 });
@@ -7704,30 +7704,30 @@
             const caloriesRatio = totals.calories / targets.targetCalories;
             
             if (proteinRatio < 0.7) {
-                advice.push('🥛 タンパク質が不足しています。プロテインシェイクや鶏胸肉、卵などを追加しましょう。');
+                advice.push('タンパク質が不足しています。プロテインシェイクや鶏胸肉、卵などを追加しましょう。');
             } else if (proteinRatio >= 0.9) {
-                advice.push('✅ タンパク質摂取は順調です！');
+                advice.push('[+] タンパク質摂取は順調です！');
             }
             
             if (caloriesRatio < 0.6) {
-                advice.push('🍚 カロリーが不足気味です。筋肥大には十分なエネルギーが必要です。');
+                advice.push('カロリーが不足気味です。筋肥大には十分なエネルギーが必要です。');
             } else if (caloriesRatio > 1.1) {
-                advice.push('⚠️ カロリーオーバー気味です。次の食事は軽めにしましょう。');
+                advice.push('[!] カロリーオーバー気味です。次の食事は軽めにしましょう。');
             }
             
             const fatRatio = totals.fat / targets.targetFat;
             if (fatRatio > 1.2) {
-                advice.push('🥗 脂質が多めです。次の食事は脂質を控えめに。');
+                advice.push('脂質が多めです。次の食事は脂質を控えめに。');
             }
             
             if (advice.length === 0) {
-                advice.push('👍 バランスの良い食事です！この調子で続けましょう。');
+                advice.push('[+] バランスの良い食事です！この調子で続けましょう。');
             }
             
             // 具体的な補食提案
             if (proteinRatio < 0.8) {
                 const proteinNeeded = Math.round(targets.targetProtein - totals.protein);
-                advice.push(`<br><strong>💪 おすすめ補食:</strong><br>
+                advice.push(`<br><strong>[+] おすすめ補食:</strong><br>
                     ・プロテイン1杯（約25g）<br>
                     ・ゆで卵2個（約14g）<br>
                     ・ギリシャヨーグルト（約10g）<br>
@@ -8217,7 +8217,7 @@
                             calDiv.style.fontSize = '8px';
                             calDiv.style.marginTop = '1px';
                             if (ratio >= 0.9 && ratio <= 1.1) {
-                                calDiv.textContent = '✅';
+                                calDiv.textContent = '[+]';
                                 calDiv.title = totalCal + 'kcal（達成）';
                                 td.style.background = T.bgBar || 'rgba(0,200,0,0.08)';
                             } else if (ratio < 0.9) {
@@ -8304,7 +8304,7 @@
             
             // 写真がある場合は表示
             if (dayPhotos.length > 0) {
-                html += '<div class="mb-3"><div class="fw-bold small mb-2">📷 食事写真</div>';
+                html += '<div class="mb-3"><div class="fw-bold small mb-2">[>] 食事写真</div>';
                 html += '<div style="display: flex; flex-wrap: wrap; gap: 8px;">';
                 
                 // 食事タイプ順にソート
@@ -8411,7 +8411,7 @@
             
             // 栄養分析ボタン
             const analyzeBtn = document.createElement('button');
-            analyzeBtn.innerHTML = '🤖 AIで栄養分析';
+            analyzeBtn.innerHTML = 'AIで栄養分析';
             analyzeBtn.style.cssText = 'margin-top: 16px; padding: 10px 20px; background: var(--pip-primary-med); color: var(--pip-bg); border: none; border-radius: 8px; cursor: pointer; font-size: 14px;';
             analyzeBtn.onclick = (e) => {
                 e.stopPropagation();
@@ -8435,12 +8435,12 @@
         async function analyzePhotoNutrition(imageSrc, caption, modal) {
             const resultDiv = document.getElementById('photoAnalysisResult');
             resultDiv.style.display = 'block';
-            resultDiv.innerHTML = '<div style="text-align:center;">🔄 分析中...</div>';
+            resultDiv.innerHTML = '<div style="text-align:center;">分析中...</div>';
             
             // Ollama接続確認
             if (!isOllamaConnected) {
                 resultDiv.innerHTML = `
-                    <div style="color: var(--pip-amber);">⚠️ Ollamaに接続されていません</div>
+                    <div style="color: var(--pip-amber);">[!] Ollamaに接続されていません</div>
                     <p style="font-size: 12px; margin-top: 8px;">
                         Ollamaを起動してください:<br>
                         <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">OLLAMA_ORIGINS="*" ollama serve</code>
@@ -8489,7 +8489,7 @@
                 if (jsonMatch) {
                     const nutrition = JSON.parse(jsonMatch[0]);
                     resultDiv.innerHTML = `
-                        <div style="font-weight: bold; margin-bottom: 8px;">🍽️ 推定結果</div>
+                        <div style="font-weight: bold; margin-bottom: 8px;">推定結果</div>
                         <div style="font-size: 13px; margin-bottom: 8px;">${nutrition.foods || '不明'}</div>
                         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; font-size: 14px;">
                             <div>カロリー: <strong>${nutrition.calories || 0}</strong> kcal</div>
@@ -8498,11 +8498,11 @@
                             <div>脂質: <strong>${nutrition.fat || 0}</strong> g</div>
                         </div>
                         <div style="font-size: 11px; color:var(--pip-green-dark); margin-top: 8px;">
-                            信頼度: ${nutrition.confidence === 'high' ? '🟢 高' : nutrition.confidence === 'medium' ? '🟡 中' : '🔴 低'}
+                            信頼度: ${nutrition.confidence === 'high' ? '高' : nutrition.confidence === 'medium' ? '中' : '低'}
                         </div>
                         <button onclick="applyEstimatedNutrition(${nutrition.calories || 0}, ${nutrition.protein || 0}, ${nutrition.carbs || 0}, ${nutrition.fat || 0}, '${(nutrition.foods || '').replace(/'/g, "\\'")}', '${caption}')" 
                                 style="margin-top: 12px; padding: 8px 16px; background: var(--pip-primary-med); color: var(--pip-bg); border: none; border-radius: 6px; cursor: pointer; width: 100%;">
-                            ✅ この値で記録する
+                            [+] この値で記録する
                         </button>
                     `;
                 } else {
@@ -8511,7 +8511,7 @@
             } catch (error) {
                 console.error('Analysis error:', error);
                 resultDiv.innerHTML = `
-                    <div style="color: var(--pip-amber);">❌ 分析に失敗しました</div>
+                    <div style="color: var(--pip-amber);">[x] 分析に失敗しました</div>
                     <p style="font-size: 12px; margin-top: 8px;">手動で栄養素を入力してください。</p>
                     ${createManualInputForm(caption)}
                 `;
@@ -9007,7 +9007,7 @@
             let tableHtml = '';
             weekData.forEach(d => {
                 const achieved = d.calories >= nutritionGoals.calories * 0.9 && d.calories <= nutritionGoals.calories * 1.1;
-                const statusIcon = d.calories === 0 ? '⚪' : achieved ? '✅' : d.calories < nutritionGoals.calories * 0.9 ? '⬇️ 不足' : '⬆️ 過剰';
+                const statusIcon = d.calories === 0 ? '[-]' : achieved ? '[+]' : d.calories < nutritionGoals.calories * 0.9 ? '[v] 不足' : '[^] 過剰';
                 tableHtml += '<tr>' +
                     '<td>' + d.label + '</td>' +
                     '<td class="text-end">' + d.calories + '</td>' +
@@ -9218,7 +9218,7 @@
                     
                     if (proteinPerKg < 1.6) {
                         detailHtml += '<div class="mt-2 p-2 rounded" style="border:1px solid var(--pip-accent);">' +
-                            '⚠️ タンパク質が ' + proteinPerKg.toFixed(1) + 'g/kg と不足気味です。' +
+                            '[!] タンパク質が ' + proteinPerKg.toFixed(1) + 'g/kg と不足気味です。' +
                             '筋肥大には体重1kgあたり1.6〜2.2gが推奨されます。' +
                             '現在の摂取量では筋合成効率が' + Math.round(proteinEfficiency * 100) + '%に低下しています。' +
                             'あと' + Math.round((1.6 * bodyWeight) - avgP) + 'g/日のタンパク質を追加しましょう。' +
@@ -9251,7 +9251,7 @@
                         '</div>' +
                     '</div>' +
                     '<div class="mt-2 p-2 rounded" style="border:1px solid var(--pip-accent);">' +
-                        '⚠️ カロリー不足が続くと筋肉が分解されます。減量中でもタンパク質を2.0g/kg以上摂取し、筋トレを継続することで筋肉の減少を最小限に抑えられます。' +
+                        '[!] カロリー不足が続くと筋肉が分解されます。減量中でもタンパク質を2.0g/kg以上摂取し、筋トレを継続することで筋肉の減少を最小限に抑えられます。' +
                     '</div>';
                 } else {
                     // ほぼ均衡
@@ -9622,7 +9622,7 @@
             // デバイス
             document.getElementById('connectedDevice').textContent = 'Apple Watch SE';
             document.getElementById('connectedDevice').style.color = T.primary;
-            document.getElementById('deviceBattery').textContent = '🔋 ' + (60 + Math.floor(Math.random() * 35)) + '%';
+            document.getElementById('deviceBattery').textContent = '' + (60 + Math.floor(Math.random() * 35)) + '%';
             
             // 睡眠
             const sleepH = 6 + Math.random() * 2;
@@ -9667,9 +9667,9 @@
             document.getElementById('readinessBar').style.width = readiness + '%';
             document.getElementById('readinessBar').style.background = readiness >= 70 ? T.statusGood : readiness >= 50 ? T.statusWarn : T.statusBad;
             document.getElementById('readinessValue').textContent = readiness + '%';
-            if (readiness >= 75) document.getElementById('readinessAdvice').textContent = '🟢 コンディション良好。高強度トレーニングに最適です。';
-            else if (readiness >= 55) document.getElementById('readinessAdvice').textContent = '🟡 普通のコンディション。通常のトレーニングが可能です。';
-            else document.getElementById('readinessAdvice').textContent = '🔴 回復不足。軽めのトレーニングか休養を推奨します。';
+            if (readiness >= 75) document.getElementById('readinessAdvice').textContent = 'コンディション良好。高強度トレーニングに最適です。';
+            else if (readiness >= 55) document.getElementById('readinessAdvice').textContent = '普通のコンディション。通常のトレーニングが可能です。';
+            else document.getElementById('readinessAdvice').textContent = '回復不足。軽めのトレーニングか休養を推奨します。';
             
             // 体組成
             document.getElementById('latestBodyWeight').textContent = bw.toFixed(1);
